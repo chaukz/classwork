@@ -9,11 +9,15 @@ using text_t = std::string;
 using number_t = int;
 
 int main(){
+std::string name ;
+int age ;
+std::cout << "Enter your name: ";
+std::getline(std::cin >> std::ws, name); // Use getline to allow spaces in the name
 
-    int correct  = 8;
-    int questions = 10;
+std::cout << "Enter your age: ";
+std::cin >> age;
 
-    double score = correct/(double)questions * 100;
-    std::cout << "Score: " << score << "%" << std::endl;
+std::cout << "Hello, " << name << "!" << std::endl;
+std::cout << "You are " << age << " years old." << std::endl;
 return 0;
 }   
