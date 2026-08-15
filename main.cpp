@@ -9,10 +9,18 @@ using text_t = std::string;
 using number_t = int;
 
 int main(){
-
-    text_t firstname = "boni";
-    number_t age = 25;
-    std::cout << "Hello, " << firstname << "!" << std::endl;
-    std::cout << "You are " << age << " years old." << std::endl;
-    return 0;
-}
+   
+    int students = 20;
+    //students = students+!;
+    //students+=2;
+    //students ++
+    if (students % 2 == 0)
+    {
+        std::cout << "Number of students is even" << std::endl;
+    }else
+    {
+        std::cout << "Number of students is odd" << std::endl;
+    }
+    std::cout << "Number of students: " << students << std::endl;
+return 0;
+}   
