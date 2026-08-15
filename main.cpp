@@ -2,12 +2,17 @@
 #include <vector>
 #include <cmath>
 
-int main(){
-double x = 3;
-double y = 4;
-double z;
+int main()
+{
+    double x, y, z;
 
-z = sqrt(9);
-std::cout << "The square root of 9 is: " << z << std::endl;
-return 0;
-}   
+    std::cout << "Enter X Value: ";
+    std::cin >> x;
+
+    std::cout << "Enter Y Value: ";
+    std::cin >> y;
+
+    z = sqrt(pow(x, 2) + pow(y, 2));
+
+    std::cout << "The value of Z is: " << z << std::endl;
+}
