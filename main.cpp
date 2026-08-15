@@ -9,18 +9,11 @@ using text_t = std::string;
 using number_t = int;
 
 int main(){
-   
-    int students = 20;
-    //students = students+!;
-    //students+=2;
-    //students ++
-    if (students % 2 == 0)
-    {
-        std::cout << "Number of students is even" << std::endl;
-    }else
-    {
-        std::cout << "Number of students is odd" << std::endl;
-    }
-    std::cout << "Number of students: " << students << std::endl;
+
+    int correct  = 8;
+    int questions = 10;
+
+    double score = correct/(double)questions * 100;
+    std::cout << "Score: " << score << "%" << std::endl;
 return 0;
 }   
