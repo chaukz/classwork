@@ -4,10 +4,22 @@
 
 int main()
 {
-    int grade;
-    std::cout << "Enter the grade: ";
-    std::cin >> grade;
-    grade >= 40 ? std::cout << "Pass" << std::endl : std::cout << "Fail" << std::endl;
+    int temp;
+
+    std::cout << "Enter a temperature in Celsius: ";
+    std::cin >> temp;
+    if (temp>0 && temp<30)
+    {
+        std::cout << "The temperature is moderate." << std::endl;
+    }
+    else if (temp<=0)
+    {
+        std::cout << "The temperature is cold." << std::endl;
+    }
+    else
+    {
+        std::cout << "The temperature is hot." << std::endl;
+    }
     
     return 0;
 }
