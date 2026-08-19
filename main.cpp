@@ -3,9 +3,10 @@
 
 int main()
 {
-   std::string name = "John";
-   char grade = 'A';
-    double gpa = 3.75;
-    std::cout << "size of gpa is:" << sizeof(char) << "bytes\n";
-    return 0;
+    std::string students[] = {"Alpha", "Beta", "Charlie", "Delta", "Echo"};
+    std::cout << "List of students:\n";
+    for (int i = 0; i < sizeof(students) / sizeof(students[0]); ++i) {
+        std::cout << students[i] << std::endl;
+    }
+  return 0;
 }
