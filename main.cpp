@@ -1,35 +1,29 @@
-#include <iostream>
+#include<iostream>
+#include<algorithm>
 
+void BubbleSort(int a[], int size);
 
-int Search(int numbers[], int size, int myNum);
-int main()
-{
-  int numbers[] = {1, 2, 3, 4, 5};
-  int size = sizeof(numbers) / sizeof(numbers[0]);
-  int index;
-  int myNUm;
+int main() {
+int a[] = {1341, 22, 34, 876, 745, 256, 67, 278, 89, 90};
+int size = sizeof(a) / sizeof(a[0]); 
 
-    std::cout << "Enter a number to search for: ";
-    std::cin >> myNUm;
-    index = Search(numbers, size, myNUm);
-    if (index != -1)
-    {
-      std::cout << "Number found at index: " << index << std::endl;
-    }
-    else
-    {
-      std::cout << "Number not found." << std::endl;
-    }
-return 0;;
+  BubbleSort(a, size);
+
+for(int element : a) {
+    std::cout << element << " ";
 }
-int Search(int numbers[], int size, int myNum)
-{
-  for (int index = 0; index < size; index++)
-  {
-    if (numbers[index] == myNum)
-    {
-      return index;
+   std::cout << std::endl;
+
+   return 0;
+}   
+
+void BubbleSort(int a[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (a[j] > a[j + 1]) {
+                std::swap(a[j], a[j + 1]);
+            }
+        }
     }
-  }
-  return -1;
 }
+
