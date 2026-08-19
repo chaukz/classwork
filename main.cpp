@@ -1,22 +1,35 @@
 #include <iostream>
 
-double getTotal(double prices[], int size);
+
+int Search(int numbers[], int size, int myNum);
 int main()
 {
-    double prices[5] = {19.99, 29.99, 39.99, 49.99, 59.99};
-    int size = sizeof(prices) / sizeof(prices[0]);
-    double total = getTotal(prices, size);
+  int numbers[] = {1, 2, 3, 4, 5};
+  int size = sizeof(numbers) / sizeof(numbers[0]);
+  int index;
+  int myNUm;
 
-    std::cout << "Total: $" << total << std::endl;
-    return 0;
-}
-double getTotal(double prices[], int size)
-{
-    double total = 0.0;
-
-    for (int i = 0; i < size; ++i)
+    std::cout << "Enter a number to search for: ";
+    std::cin >> myNUm;
+    index = Search(numbers, size, myNUm);
+    if (index != -1)
     {
-        total += prices[i];
+      std::cout << "Number found at index: " << index << std::endl;
     }
-    return total;
+    else
+    {
+      std::cout << "Number not found." << std::endl;
+    }
+return 0;;
+}
+int Search(int numbers[], int size, int myNum)
+{
+  for (int index = 0; index < size; index++)
+  {
+    if (numbers[index] == myNum)
+    {
+      return index;
+    }
+  }
+  return -1;
 }
