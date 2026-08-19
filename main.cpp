@@ -4,9 +4,18 @@
 int main()
 {
     std::string students[] = {"Alpha", "Beta", "Charlie", "Delta", "Echo"};
-    std::cout << "List of students:\n";
-    for (int i = 0; i < sizeof(students) / sizeof(students[0]); ++i) {
-        std::cout << students[i] << std::endl;
-    }
-  return 0;
+    int grade[] = {90, 85, 78, 92, 88};
+
+  for (const auto& student : students)
+  {
+      std::cout << student << std::endl;
+  }
+  for (const auto& g : grade)
+  {
+      std::cout << g << std::endl;
+  }
+
+    return 0;   
+  
 }
+ 
