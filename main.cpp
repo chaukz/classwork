@@ -1,26 +1,19 @@
-#include<iostream>
+#include <iostream>
 
-int main() {
-   
-std::string foods[5];
-int size = sizeof(foods)/sizeof(foods[0]);
-std::string temp;
-for(int i = 0; i < size; i++) {
-    std::cout << "Enter food item " << (i + 1) << ": ";
-    std::getline(std::cin, temp);
-    foods[i] = temp;
-    if (temp== "q")
+int main()
+{
+    std::string cars[][4] = {{"NSX", "Civic", "Accord", "Camry"},
+                             {"Supra", "MR2", "Prius", "Celica"},
+                             {"Silvia", "RX-7", "Skyline", "NP200"}};
+    int rows = sizeof(cars) / sizeof(cars[0]);
+    int columns = sizeof(cars[0]) / sizeof(cars[0][0]);
+    for (int i = 0; i < rows; i++)
     {
-        /* code */break;
-    }else{
-        continue;
+        for (int j = 0; j < columns; j++)
+        {
+            std::cout << cars[i][j] << " ";
+        }
+        std::cout << std::endl;
     }
-    
+  return 0;                         
 }
-std::cout << "\nYou entered the following food items:\n";
-for(std::string food : foods) {
-    std::cout << food << std::endl;
-}
-return 0;
-}
-
