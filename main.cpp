@@ -1,14 +1,22 @@
 #include <iostream>
-
+    
+void swap(std::string &a, std::string &b);
+    
 int main()
 {
     
- std::string name = "bob";
- int age = 30;
- bool isStudent = true;
+std::string x = "cool aid";
+std::string y = "water";
 
- std::cout << &name << '\n';
- std::cout << &age << '\n';
- std::cout << &isStudent << '\n';
+swap(x, y);
+std::cout << "x: " << x << std::endl;
+std::cout << "y: " << y << std::endl;
     return 0;
+}
+
+void swap (std::string &a, std::string &b)
+{
+    std::string temp = a;
+    a = b;
+    b = temp;
 }
