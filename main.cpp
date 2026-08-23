@@ -1,29 +1,15 @@
 #include<iostream>
-#include<algorithm>
-
-void BubbleSort(int a[], int size);
 
 int main() {
-int a[] = {1341, 22, 34, 876, 745, 256, 67, 278, 89, 90};
-int size = sizeof(a) / sizeof(a[0]); 
+    const int size = 99;
+std::string foods[size];
+fill(foods, foods + (size/3), "Pizza");
+fill(foods + (size/3), foods + (size/3 * 2), "Pasta");
+fill(foods + (size/3 * 2), foods + size, "Burger");
 
-  BubbleSort(a, size);
-
-for(int element : a) {
-    std::cout << element << " ";
+for(std::string food : foods) {
+    std::cout << food << std::endl;
 }
-   std::cout << std::endl;
-
-   return 0;
-}   
-
-void BubbleSort(int a[], int size) {
-    for (int i = 0; i < size - 1; i++) {
-        for (int j = 0; j < size - i - 1; j++) {
-            if (a[j] > a[j + 1]) {
-                std::swap(a[j], a[j + 1]);
-            }
-        }
-    }
+return 0;
 }
 
