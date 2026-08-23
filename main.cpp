@@ -1,12 +1,14 @@
 #include<iostream>
 
 int main() {
-    const int size = 99;
-std::string foods[size];
-fill(foods, foods + (size/3), "Pizza");
-fill(foods + (size/3), foods + (size/3 * 2), "Pasta");
-fill(foods + (size/3 * 2), foods + size, "Burger");
-
+   
+std::string foods[5];
+int size = sizeof(foods)/sizeof(foods[0]);
+for(int i = 0; i < size; i++) {
+    std::cout << "Enter food item " << (i + 1) << ": ";
+    std::getline(std::cin, foods[i]);
+}
+std::cout << "\nYou entered the following food items:\n";
 for(std::string food : foods) {
     std::cout << food << std::endl;
 }
