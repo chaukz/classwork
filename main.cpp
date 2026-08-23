@@ -1,22 +1,20 @@
 #include <iostream>
     
-void swap(std::string &a, std::string &b);
+void printInfo(const std::string &name, int age);
     
 int main()
 {
-    
-std::string x = "cool aid";
-std::string y = "water";
+    std:: string name = "John";
+    int age  =21;
 
-swap(x, y);
-std::cout << "x: " << x << std::endl;
-std::cout << "y: " << y << std::endl;
-    return 0;
+    printInfo(name, age);
+
+return 0;
 }
-
-void swap (std::string &a, std::string &b)
+void printInfo(const std::string &name, int age)
 {
-    std::string temp = a;
-    a = b;
-    b = temp;
+    name = "Jane"; // This will not affect the original name in main since it's passed by const reference
+    age = 30; // This will not affect the original age in main since it's passed by value
+    std::cout << "Name: " << name << '\n'
+    <<"Age: " << age << std::endl;
 }
