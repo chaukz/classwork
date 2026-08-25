@@ -1,26 +1,19 @@
 #include <iostream>
-    
-int getDigit( const int number);
-int sumOddDigits( const std::string cardnumber);
-int sumEvenDigits( const std::string cardnumber);
-    
+
 int main()
 {
+    int *pointer = nullptr;
+    int x = 123;
 
-    std::string name = "John Doe";
-    int age = 30;
-std::string freePizzas[5] = {"Margherita", "Pepperoni", "Hawaiian", "Veggie", "BBQ Chicken"};
+    pointer = &x;
 
-    std::string *pname = &name;
-    int *page = &age;
-    std::string *pfreePizzas = freePizzas;
-
-    std::cout << "Name: " << *pname << std::endl;
-    std::cout << "Age: " << *page << std::endl;
-    std::cout << "Free Pizzas: " << std::endl;
-    for (int i = 0; i < 5; i++)
+    if (pointer == nullptr)
     {
-        std::cout << " - " << pfreePizzas[i] << std::endl;
+        std::cout << "Pointer is null." << std::endl;
     }
-return 0;
+    else
+    {
+        std::cout << "Pointer is not null." << std::endl;
+    }
+    return 0;
 }
