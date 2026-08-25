@@ -1,15 +1,9 @@
 #include <iostream>
-void walk(int steps);
-int main() {
-    int steps;
-    std::cout << "Enter the number of steps to walk: ";
-    std::cin >> steps;
-    walk(steps);
-    return 0;
+template <typename T>
+T max(T a, T b) {
+    return (a > b) ? a : b;
 }
-
-void walk (int steps) {
-    for (int i = 0; i < steps; ++i) {
-        std::cout << "Step " << (i + 1) << std::endl;
-    }
+int main() {
+std::cout << "Max of 10 and 20 is: " << max(10, 20) << std::endl;
+    return 0;
 }
