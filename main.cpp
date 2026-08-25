@@ -1,25 +1,16 @@
 #include <iostream>
-int main() {
-    
-char *pGrades = NULL;
-int size ;
-
-std::cout << "Enter the grades: ";
-std::cin >> size;
-
-pGrades = new char[size];
-
-for (int i = 0; i < size; i++)
+void walk(int steps);
+int main()
 {
-    std::cout << "Enter grade " << i + 1 << ": ";
-    std::cin >> pGrades[i];
-}
-
-for (int i = 0; i < size; i++)
-{
-    std::cout << "Grade " << i + 1 << ": " << pGrades[i] << std::endl;
-}
-delete[] pGrades;
+    walk(100);
     return 0;
+}
 
+void walk(int steps)
+{
+    if(steps > 0)
+    {
+        std::cout << "Walking " << steps << " steps." << std::endl;
+        walk(steps - 1);
+    }
 }
