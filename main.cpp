@@ -1,6 +1,6 @@
 #include <iostream>
-template <typename T>
-T max(T a, T b) {
+template <typename T, typename U>
+auto max(T a, U b) {
     return (a > b) ? a : b;
 }
 int main() {
