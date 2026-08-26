@@ -1,6 +1,11 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+#include <string>
+#include <iostream>
+
 class Student
 {
-private:
+protected:
     std::string name;
     int age;
     double gpa;
@@ -26,3 +31,5 @@ public:
         return "Name: " + name + ", Age: " + std::to_string(age) + ", GPA: " + std::to_string(gpa);
     }
 };
+
+#endif // STUDENT_H
