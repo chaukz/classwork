@@ -1,35 +1,40 @@
 #include <iostream>
-
-struct Car
+enum Days
 {
-std::string brand;
-int year;
-std::string colour;
+    Monday = 0,
+    Tuesday = 1,
+    Wednesday = 2,
+    Thursday = 3,
+    Friday = 4,
+    Saturday = 5,
+    Sunday = 6
 };
-
-
-void printCarInfo(Car c);
 int main()
 {
-    Car car1;
-    Car car2;
 
-    car1.brand = "Toyota";
-    car1.year = 2020;
-    car1.colour = "Red";
-
-    car2.brand = "Honda";
-    car2.year = 2018;
-    car2.colour = "Blue";
-
-   printCarInfo(car1);
-    printCarInfo(car2);
-    return 0;
-}
-
-void printCarInfo(Car c)
-{
-    std::cout << "Brand: " << c.brand << std::endl;
-    std::cout << "Year: " << c.year << std::endl;
-    std::cout << "Colour: " << c.colour << std::endl;
+    Days today = Sunday;
+    switch (today)
+    {
+    case Monday:
+        std::cout << "Today is Monday" << std::endl;
+        break;
+    case Tuesday:
+        std::cout << "Today is Tuesday" << std::endl;
+        break;
+    case Wednesday:
+        std::cout << "Today is Wednesday" << std::endl;
+        break;
+    case Thursday:
+        std::cout << "Today is Thursday" << std::endl;
+        break;
+    case Friday:
+        std::cout << "Today is Friday" << std::endl;
+        break;
+    case Saturday:
+        std::cout << "Today is Saturday" << std::endl;
+        break;
+    case Sunday:
+        std::cout << "Today is Sunday" << std::endl;
+        break;
+    }
 }
