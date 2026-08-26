@@ -1,40 +1,40 @@
-#include <iostream>
-enum Days
-{
-    Monday = 0,
-    Tuesday = 1,
-    Wednesday = 2,
-    Thursday = 3,
-    Friday = 4,
-    Saturday = 5,
-    Sunday = 6
-};
-int main()
-{
+#include<iostream>
 
-    Days today = Sunday;
-    switch (today)
-    {
-    case Monday:
-        std::cout << "Today is Monday" << std::endl;
-        break;
-    case Tuesday:
-        std::cout << "Today is Tuesday" << std::endl;
-        break;
-    case Wednesday:
-        std::cout << "Today is Wednesday" << std::endl;
-        break;
-    case Thursday:
-        std::cout << "Today is Thursday" << std::endl;
-        break;
-    case Friday:
-        std::cout << "Today is Friday" << std::endl;
-        break;
-    case Saturday:
-        std::cout << "Today is Saturday" << std::endl;
-        break;
-    case Sunday:
-        std::cout << "Today is Sunday" << std::endl;
-        break;
+class Human{
+    public:
+    std::string name;
+    std::string occupation;
+    int age;
+    struct Address{
+        std::string city;
+        std::string state;
+        std::string country;
+    };
+    Address addr;
+
+    void eat(){
+        std::cout<<"Eating"<<std::endl;
     }
+    void sleep(){
+        std::cout<<"Sleeping"<<std::endl;
+    }
+    void work(){
+        std::cout<<"Working"<<std::endl;
+    }
+};
+
+int main() {
+ Human h1;
+ h1.name = "John Doe";
+ h1.occupation = "Engineer";
+ h1.age = 30;
+ h1.addr.city = "New York";
+    h1.addr.state = "NY";
+    h1.addr.country = "USA";
+    h1.eat();
+    h1.sleep();
+    h1.work();
+
+    std::cout << h1.name << " is a " << h1.occupation << " aged " << h1.age << " living in " << h1.addr.city << ", " << h1.addr.state << ", " << h1.addr.country << std::endl;
+    return 0;
 }
