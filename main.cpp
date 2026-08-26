@@ -1,5 +1,5 @@
 #include <iostream>
-#include "student.cpp"
+#include "student.h"
 
 int main()
 {

@@ -1,12 +1,13 @@
-#include <iostream>
-
 class Student
 {
-public:
+private:
     std::string name;
     int age;
     double gpa;
+
+public:
     Student(std::string n, int a, double g) : name(n), age(a), gpa(g) {}
+
     void display()
     {
         std::cout << "Name: " << name << ", Age: " << age << ", GPA: " << gpa << std::endl;
