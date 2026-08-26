@@ -1,21 +1,35 @@
 #include <iostream>
 
-struct student
+struct Car
 {
-    std::string name;
-    double gpa;
-    bool enrolled = true;
+std::string brand;
+int year;
+std::string colour;
 };
 
+
+void printCarInfo(Car c);
 int main()
 {
-    student s1;
-    s1.name = "John Doe";
-    s1.gpa = 3.8;
+    Car car1;
+    Car car2;
 
-    std::cout << "Student Name: " << s1.name << std::endl;
-    std::cout << "GPA: " << s1.gpa << std::endl;
-    std::cout << "Enrolled: " << (s1.enrolled ? "Yes" : "No") << std::endl;
+    car1.brand = "Toyota";
+    car1.year = 2020;
+    car1.colour = "Red";
 
+    car2.brand = "Honda";
+    car2.year = 2018;
+    car2.colour = "Blue";
+
+   printCarInfo(car1);
+    printCarInfo(car2);
     return 0;
+}
+
+void printCarInfo(Car c)
+{
+    std::cout << "Brand: " << c.brand << std::endl;
+    std::cout << "Year: " << c.year << std::endl;
+    std::cout << "Colour: " << c.colour << std::endl;
 }
