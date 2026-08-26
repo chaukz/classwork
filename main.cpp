@@ -1,9 +1,21 @@
 #include <iostream>
-template <typename T, typename U>
-auto max(T a, U b) {
-    return (a > b) ? a : b;
-}
-int main() {
-std::cout << "Max of 10 and 20 is: " << max(10, 20) << std::endl;
+
+struct student
+{
+    std::string name;
+    double gpa;
+    bool enrolled = true;
+};
+
+int main()
+{
+    student s1;
+    s1.name = "John Doe";
+    s1.gpa = 3.8;
+
+    std::cout << "Student Name: " << s1.name << std::endl;
+    std::cout << "GPA: " << s1.gpa << std::endl;
+    std::cout << "Enrolled: " << (s1.enrolled ? "Yes" : "No") << std::endl;
+
     return 0;
 }
